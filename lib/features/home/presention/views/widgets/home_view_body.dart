@@ -26,6 +26,7 @@ class HomeViewBody extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.bold,
               color: Colors.white,
+              fontFamily: 'Poppins',
               decoration: TextDecoration.none,
             ),
           ),
