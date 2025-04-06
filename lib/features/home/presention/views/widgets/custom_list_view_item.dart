@@ -15,7 +15,7 @@ class FeaturedListViewItem extends StatelessWidget {
               image: const DecorationImage(
                   fit: BoxFit.fill,
                   image: NetworkImage(
-                      "https://i.pinimg.com/736x/74/97/0f/74970fd00d0dcd778df182b94bf7b0fc.jpg"))),
+                      "https://i.pinimg.com/736x/aa/94/e2/aa94e21b2d8eb073aae96c8588cd1002.jpg"))),
         ),
       ),
     );
