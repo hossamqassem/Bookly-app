@@ -3,20 +3,26 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.center});
+      {super.key,
+      this.mainAxisAlignment = MainAxisAlignment.center,
+      required this.rating,
+      required this.count});
   final MainAxisAlignment mainAxisAlignment;
+  final int rating;
+  final int count;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
-      children: const [
-        Icon(FontAwesomeIcons.solidStar, color: Color(0XFFFFDD4F), size: 15),
-        SizedBox(
+      children: [
+        const Icon(FontAwesomeIcons.solidStar,
+            color: Color(0XFFFFDD4F), size: 15),
+        const SizedBox(
           width: 7,
         ),
         Text(
-          '4.8',
-          style: TextStyle(
+          rating.toString(),
+          style: const TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w600,
             color: Colors.white,
@@ -24,11 +30,11 @@ class BookRating extends StatelessWidget {
             decoration: TextDecoration.none,
           ),
         ),
-        SizedBox(
-          width: 5,
+        const SizedBox(
+          width: 7,
         ),
-        Text('(2456)',
-            style: TextStyle(
+        Text('($count)',
+            style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w600,
               color: Colors.grey,
