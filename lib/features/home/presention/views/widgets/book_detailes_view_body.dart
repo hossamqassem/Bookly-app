@@ -1,36 +1,35 @@
-import 'package:bookly_app/features/home/presention/views/widgets/book_action.dart';
-import 'package:bookly_app/features/home/presention/views/widgets/book_rating.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/presention/views/widgets/books_detailes_section.dart';
 import 'package:bookly_app/features/home/presention/views/widgets/custom_book_detiles_appbar.dart';
-import 'package:bookly_app/features/home/presention/views/widgets/custom_book_item.dart';
-import 'package:bookly_app/features/home/presention/views/widgets/similar_books_list_view.dart';
 import 'package:bookly_app/features/home/presention/views/widgets/similar_books_section.dart';
 import 'package:flutter/material.dart';
 
 class BookDetilesViewBody extends StatelessWidget {
-  const BookDetilesViewBody({super.key});
-
+  const BookDetilesViewBody({super.key, required this.bookModel});
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
+    return CustomScrollView(
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Column(
               children: [
-                SafeArea(
+                const SafeArea(
                   child: CustomBookDetilesAppBar(),
                 ),
-                SizedBox(
-                  height: 15,
+                const SizedBox(
+                  height: 6,
                 ),
-                BookDetailesSection(),
-                SizedBox(
-                  height: 50,
+                BookDetailesSection(
+                  book: bookModel,
                 ),
-                SimilarBooksSection(),
+                const SizedBox(
+                  height: 8,
+                ),
+                const SimilarBooksSection(),
               ],
             ),
           ),

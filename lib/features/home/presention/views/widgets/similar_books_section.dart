@@ -14,7 +14,7 @@ class SimilarBooksSection extends StatelessWidget {
               fontSize: 14,
               fontWeight: FontWeight.w600,
             )),
-        SizedBox(height: 10),
+        SizedBox(height: 20),
         SimilarBooksListView(),
       ],
     );
